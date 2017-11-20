@@ -1,9 +1,10 @@
 'use strict';
 const http = require('http');
-const cp = require('child_process');
 const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plane; charset=utf-8'});
   const path = req.url;
-  res.end(cp.execSync('echo ' + path));
+  res.write(req.url);
+  res.end();
 });
 const port = 8000;
 server.listen(port, () => {
