@@ -1,6 +1,7 @@
 'use strict';
 const http = require('http');
 const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plane; charset=utf-8'});
   const path = req.url;
   res.write(req.url);
   res.end();
