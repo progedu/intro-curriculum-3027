@@ -3,9 +3,9 @@ const http = require('http');
 const cp = require('child_process');
 const server = http.createServer((req, res) => {
   const path = req.url;
-  res.end(cp.execSync('echo ' + path));
+  res.end('echo ' + path);
 });
-const port = 8000;
+const port = 3000;
 server.listen(port, () => {
   console.info('Listening on ' + port);
 });
