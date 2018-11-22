@@ -1,13 +1,12 @@
 'use strict';
 const http = require('http');
-const cp = require('child_process');
 const server = http.createServer((req, res) => {
   res.writeHead(200, {
     'Content-Type':'text/plain;charset=utf-8' //
   })
   const path = req.url;
-  //これでもいけました。↓
-  res.end(cp.execSync(`echo '${path}'`));
+  //正式に関数を用いない方法に変更
+  res.end('echo ' + path);
 });
 const port = 8000;
 server.listen(port, () => {
