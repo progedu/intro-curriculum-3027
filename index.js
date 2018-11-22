@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   })
   const path = req.url;
   //正式に関数を用いない方法に変更
-  res.end('echo ' + path);
+  res.end(path);
 });
 const port = 8000;
 server.listen(port, () => {
