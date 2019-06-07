@@ -1,9 +1,9 @@
 'use strict';
 const http = require('http');
-const cp = require('child_process');
 const server = http.createServer((req, res) => {
   const path = req.url;
-  res.end(cp.execSync('echo ' + path));
+  res.end('<!DOCTYPE html><html lang="ja"><body>' +
+  path + '</body></html>');
 });
 const port = 8000;
 server.listen(port, () => {
