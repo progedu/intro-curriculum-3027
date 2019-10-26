@@ -3,7 +3,7 @@ const http = require('http');
 const cp = require('child_process');
 const server = http.createServer((req, res) => {
   const path = req.url;
-  res.end(path);
+  res.end( path);
 });
 const port = 8000;
 server.listen(port, () => {
