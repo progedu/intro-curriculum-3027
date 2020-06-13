@@ -1,0 +1,1 @@
+"use strict";var http=require("http"),server=http.createServer(function(e,r){var t=e.url;r.end(t)}),port=8e3;server.listen(port,function(){console.info("Listening on "+port)});
