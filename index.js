@@ -4,7 +4,7 @@ const cp = require('child_process');
 const server = http.createServer((req, res) => {
   const path = req.url;
   res.writeHead(200, {
-    'Content-Type': 'text/plain, charhset=utf=8'
+    'Content-Type': 'text/plain, charset=utf=8'
   });
   res.end(path);
 });
